@@ -1,0 +1,20 @@
+{
+  "name": "ceremony-script",
+  "version": "1.0.0",
+  "description": "This is a single-page applet that will automatically generate a script for a ceremony based on information submitted via a web form",
+  "main": "Script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jay Welborn",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "browserify": "^15.2.0",
+    "browsersync": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
