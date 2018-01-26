@@ -1,16 +1,32 @@
 $(document).ready(function(){
 
 var bugleBox = document.getElementById("bugle-checkbox");
+var flowerBox = document.getElementById("flowers-checkbox");
+var flowerInputs = $("#flower-presentation-inputs");
 var box2 = document.getElementById("box2");
 var box3 = document.getElementById("box3");
 var button = document.getElementById("submit");
 var script = $("#script");
-script.hide()
+script.hide();
+flowerInputs.hide();
+
+flowerBox.onclick = function() {
+  flowerInputs.toggle();
+}
 
 button.onclick = function(){
-  // script.innerHTML = scriptHTML;
+  // Get unit/date/time input values;
   var unitName = $('#unit-name-input').val();
   var date = $('#ceremony-date-input').val();
+  var time = $('#ceremony-time-input').val();
+
+  // Outgoing/Incoming Commander Values
+  var outgoing = getCommanderValues('outgoing');
+  var incoming = getCommanderValues('incoming');
+  var ncoy = getCommanderValues('ncoy');
+  var rewiewingSpouse = getCommanderValues('reviewing-spouse');
+  var incomingSpouse = getCommanderValues('incoming-spouse');
+  var outgoingSpouse = getCommanderValues('outgoing-spouse');
 
   // add or remove bugle
   if (! bugleBox.checked) {
@@ -19,13 +35,24 @@ button.onclick = function(){
     addBugle();
   };
 
+  if (flowerBox.checked) {
+    addFlowers();
+  } else {
+    removeFlowers();
+  }
+
   // Change unit name
   changeUnitName(unitName);
 
   // Update ceremony date
   changeDate(date);
 
-  console.log(unitName);
+  // Update ceremony time
+  changeTime(time);
+
+  // Update outgoing/incoming commander's info
+  changeCommanderInfo(outgoing);
+  changeCommanderInfo(incoming);
 
   script.show();
 };
@@ -140,4 +167,41 @@ function changeDate(date) {
   if (date) {
     $('.ceremony-date').html(date);
   }
+}
+
+function changeTime(time) {
+  if (time) {
+    console.log(time);
+    $('.ceremony-time').html(time);
+  }
+}
+
+function getCommanderValues(status) {
+  var rank = $('#' + status + '-rank-input').val();
+  var firstName = $('#' + status + '-first-input').val();
+  var lastName = $('#' + status + '-last-input').val();
+
+  var commander = {
+    status: status,
+    rank: rank,
+    firstName: firstName,
+    lastName: lastName,
+    fullName: firstName + ' ' + lastName,
+    fullRankAndName: rank + ' ' + firstName + ' ' + lastName,
+  }
+
+  console.log(commander);
+  return commander;
+}
+
+function changeCommanderInfo(commander) {
+  return;
+}
+
+function addFlowers() {
+  // TODO
+}
+
+function removeFlowers() {
+  // TODO
 }

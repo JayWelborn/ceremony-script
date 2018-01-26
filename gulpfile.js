@@ -18,6 +18,11 @@ gulp.task('js-watch', ['js'], function (done) {
     done();
 });
 
+// general reload script for mutliple file types
+gulp.task('reload', function() {
+    browserSync.reload();
+})
+
 // use default task to launch Browsersync and watch JS files
 gulp.task('default', ['js'], function () {
 
@@ -31,4 +36,10 @@ gulp.task('default', ['js'], function () {
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
     gulp.watch("js/*.js", ['js-watch']);
+
+    // reload whenever HTML files are updated
+    gulp.watch("./*.html", ['reload']);
+
+    // reload when SASS files are updated
+    gulp.watch("./**/*.SASS", ['reload']);
 });

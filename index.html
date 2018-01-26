@@ -2,23 +2,75 @@
 <html>
   <head>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="dist/js/script.js"></script>
     <style>
         #script {max-width:720px; margin:0px auto;}
     </style>
   </head>
   <body>
     <div id="script-generator">
+
+      <!-- Begin yes/no options -->
       <input type="checkbox" name="bugle" id="bugle-checkbox">
       Bugle
       <br>
+      <input type="checkbox" id='flowers-checkbox'>
+      Flower Presentation
+      <!-- End yes/not options -->
+      <br>
+
+      <!-- Ceremony Date/Time info -->
       <input type="text" name="Unit Name" id="unit-name-input" placeholder="Unit Name">
       <br>
-      <input type="date" name="Date" id="ceremony-date-input" placeholder="Ceremony Date">
+      Date: <input type="date" name="Date" id="ceremony-date-input">
       <br>
+      Time: <input type="time" id='ceremony-time-input'>
+      <br>
+      <!-- End date/time info -->
+
+      <!-- Begin Outgoing Commander info -->
+      Outgoing Commander:&nbsp;
+      <input type="text" id='outgoing-rank-input' placeholder="Rank">
+      <input type='text' id='outgoing-first-input' placeholder='First Name'>
+      <input type="text" id='outgoing-last-input' placeholder="Last Name">
+      <br>
+      <!-- End outgoing commander info -->
+
+      <!-- Begin Incoming Commander info -->
+      Incoming Commander:&nbsp;
+      <input type="text" id='incoming-rank-input' placeholder="Rank">
+      <input type='text' id='incoming-first-input' placeholder='First Name'>
+      <input type="text" id='incoming-last-input' placeholder="Last Name">
+      <br>
+      <!-- End Incoming commander info -->
+
+      <!-- Flower presentation info -->
+      <div id='flower-presentation-inputs'>
+
+            <br> For Flower Presentation <br>
+            Unit NCO Of the Year (or person presenting flowers):&nbsp;
+            <input type="text" id='ncoy-rank-input' placeholder="Rank or Title">
+            <input type='text' id='ncoy-first-name' placeholder='First Name'>
+            <input type="text" id='ncoy-last-name' placeholder="Last Name">
+            <br>
+            Reviewing Officer&rsquo;s spouse:&nbsp;
+            <input type="text" id='reviewing-spouse-rank-input' placeholder="Rank or Title">
+            <input type='text' id='reviewing-spouse-first-name' placeholder='First Name'>
+            <input type="text" id='reviewing-spouse-last-name' placeholder="Last Name">
+            <br>
+            Incoming Commander&rsquo;s spouse:&nbsp;
+            <input type="text" id='outgoing-spouse-rank-input' placeholder="Rank or Title">
+            <input type='text' id='outgoing-spouse-first-name' placeholder='First Name'>
+            <input type="text" id='outgoing-spouse-last-name' placeholder="Last Name">
+            <br>
+      </div>
+      <!-- end flower presentation -->
+
+      <!-- Submit button -->
       <button id="submit">
         Make Script
       </button>
+      <!-- End Submit button -->
     </div>
     <br>
     <hr>
@@ -32,7 +84,7 @@
       style='font-size:16.0pt'><o:p></o:p></span></p>
 
       <p class=Default align=center style='margin-top:12.0pt;text-align:center'><b><span
-      style='font-size:16.0pt'>[Day of Week], <span class='ceremony-date'>[Date]</span>, [Time]</span></b><span
+      style='font-size:16.0pt'>[Day of Week], <span class='ceremony-date'>[Date]</span>, <span class='ceremony-time'>[Time]</span></span></b><span
       style='font-size:16.0pt'><o:p></o:p></span></p>
 
       <p class=Default style='margin-top:12.0pt'><b><span style='font-size:11.5pt'>NOTE:
@@ -120,13 +172,30 @@
 
       <p class=Default style='margin-top:12.0pt'><span style='font-size:14.0pt'>GOOD
       MORNING, DISTINGUISHED GUESTS, SOLDIERS, FAMILIES, AND FRIENDS. WELCOME TO THE
-      CHANGE OF COMMAND FOR <span class='unit-name'>[Unit Name]</span>. TODAY, WE HONOR [Outgoing Commander&rsquo;s Rank
-      and Full Name] AS [HE/SHE] RELINQUISHES COMMAND TO [Incoming Commander&rsquo;s Rank
-      and Full Name]. <o:p></o:p></span></p>
+      CHANGE OF COMMAND FOR <span class='unit-name'>[Unit Name]</span>. TODAY, WE HONOR
+
+      <span class='outgoing-rank-and-name'>
+            [Outgoing Commander&rsquo;s Rank and Full Name]
+      </span>
+
+      AS [HE/SHE] RELINQUISHES COMMAND TO
+
+      <span class='incoming-rank-and-name'>
+            [Incoming Commander&rsquo;s Rank and Full Name].
+      </span>
+
+      <o:p></o:p></span></p>
 
       <p class=Default style='margin-top:12.0pt'><span style='font-size:14.0pt'>THE
-      REVIEWING OFFICER FOR TODAY&rsquo;S CEREMONY IS [Rank and Full Name], THE [COMMANDING
-      GENERAL/COMMANDING OFFICER/ DIRECTOR] OF <span class='unit-name'>[Unit Name]</span>. <o:p></o:p></span></p>
+      REVIEWING OFFICER FOR TODAY&rsquo;S CEREMONY IS
+
+      <span class='reviewing-rank-and-name'>
+            [Rank and Full Name],
+      </span>
+
+      THE [COMMANDING
+      GENERAL/COMMANDING OFFICER/ DIRECTOR]
+      OF <span class='unit-name'>[Unit Name]</span>. <o:p></o:p></span></p>
 
       <p class=Default style='margin-top:12.0pt'><span style='font-size:14.0pt'>THE
       COMMANDER OF TROOPS IS THE [Title], [Unit], [Rank and Full Name]. <o:p></o:p></span></p>
@@ -201,7 +270,12 @@
 
       <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>NARRATOR:
       </span></b><span style='font-size:14.0pt'>LADIES AND GENTLEMEN, PLEASE STAND
-      FOR THE INVOCATION BY CHAPLAIN [Rank and Full Name], COMMAND CHAPLAIN OF <span class='unit-name'>[Unit
+      FOR THE INVOCATION BY CHAPLAIN
+
+      <span class="chaplain-rank-and-name">
+            [Rank and Full Name]
+      </span>
+      , COMMAND CHAPLAIN OF <span class='unit-name'>[Unit
       Name] </span>. <o:p></o:p></span></p>
 
       <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>TRANSLATOR:
@@ -226,39 +300,65 @@
       <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>TRANSLATOR</span></b><span
       style='font-size:14.0pt'>: [HOST-NATION LANGUAGE TRANSLATION]. <o:p></o:p></span></p>
 
-      <p class=Default style='margin-top:12.0pt'><b><span style='font-size:11.5pt'>4.
-      Presentation of Flowers. </span></b><span style='font-size:11.5pt'><o:p></o:p></span></p>
+      <div class="flower-remove">
+            <p class=Default style='margin-top:12.0pt'><b><span style='font-size:11.5pt'>4.
+            Presentation of Flowers. </span></b><span style='font-size:11.5pt'><o:p></o:p></span></p>
 
-      <p class=Default style='margin-top:12.0pt'><b><span style='font-size:11.0pt'>a.
-      <i>[Narrator/Translator]: </i></span></b><i><span style='font-size:11.0pt'>The
-      narrator reads the outgoing CDR&rsquo;s spouse presentation. </span></i><span
-      style='font-size:11.0pt'><o:p></o:p></span></p>
+            <p class=Default style='margin-top:12.0pt'><b><span style='font-size:11.0pt'>a.
+            <i>[Narrator/Translator]: </i></span></b><i><span style='font-size:11.0pt'>The
+            narrator reads the outgoing CDR&rsquo;s spouse presentation. </span></i><span
+            style='font-size:11.0pt'><o:p></o:p></span></p>
 
-      <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>NARRATOR:
-      </span></b><span style='font-size:14.0pt'>AT THIS TIME, [Rank and Full Name],
-      THE <span class='unit-name'>[Unit Name]</span> NONCOMMISSIONED OFFICER OF THE YEAR, WILL ESCORT [Title
-      (Mr./Ms./Other) and Name of Reviewing Officer&rsquo;s Spouse] TO PRESENT A BOUQUET OF
-      RED ROSES TO [Title (Mr./Ms./Other) and Name of Outgoing Commander&rsquo;s Spouse]
-      FOR [HIS/HER] DEVOTION, DEDICATION, AND TIRELESS EFFORTS ON BEHALF OF THE
-      SOLDIERS AND FAMILIES OF THE <span class='unit-name'>[Unit Name]</span>. <o:p></o:p></span></p>
+            <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>NARRATOR:
+            </span></b><span style='font-size:14.0pt'>AT THIS TIME,
 
-      <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>TRANSLATOR</span></b><span
-      style='font-size:14.0pt'>: [HOST-NATION LANGUAGE TRANSLATION]. <o:p></o:p></span></p>
+            <span class="ncoy-rank-and-name">
+                  [Rank and Full Name],
+            </span>
 
-      <p class=Default style='margin-top:12.0pt'><b><span style='font-size:11.0pt'>b.
-      <i>[Narrator/Translator]: </i></span></b><i><span style='font-size:11.0pt'>The
-      narrator reads the incoming CDR&rsquo;s spouse presentation. </span></i><span
-      style='font-size:11.0pt'><o:p></o:p></span></p>
+            THE <span class='unit-name'>[Unit Name]</span> NONCOMMISSIONED OFFICER OF THE YEAR, WILL ESCORT
 
-      <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>NARRATOR:
-      </span></b><span style='font-size:14.0pt'>[Title (Mr./Ms./Other) and Name of
-      Reviewing Officer&rsquo;s Spouse] WILL NOW PRESENT A BOUQUET OF YELLOW ROSE BUDS TO
-      [Title (Mr./Ms./Other) and Name of Incoming Commander&rsquo;s Spouse], TO REPRESENT
-      THE BEGINNING OF NEW RELATIONSHIPS THAT WILL SOON BE FORMED IN THE COMMAND AND
-      IN THE COMMUNITY. <o:p></o:p></span></p>
+            <spanc class='reviewing-spouse-rank-and-name'>
+                  [Title (Mr./Ms./Other) and Name of Reviewing Officer&rsquo;s Spouse]
+            </span>
 
-      <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>TRANSLATOR</span></b><span
-      style='font-size:14.0pt'>: [HOST-NATION LANGUAGE TRANSLATION]. <o:p></o:p></span></p>
+            TO PRESENT A BOUQUET OF
+            RED ROSES TO
+
+            <span class="outgoing-spouse-rank-and-name">
+                  [Title (Mr./Ms./Other) and Name of Outgoing Commander&rsquo;s Spouse]
+            </span>
+            FOR [HIS/HER] DEVOTION, DEDICATION, AND TIRELESS EFFORTS ON BEHALF OF THE
+            SOLDIERS AND FAMILIES OF THE <span class='unit-name'>[Unit Name]</span>. <o:p></o:p></span></p>
+
+            <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>TRANSLATOR</span></b><span
+            style='font-size:14.0pt'>: [HOST-NATION LANGUAGE TRANSLATION]. <o:p></o:p></span></p>
+
+            <p class=Default style='margin-top:12.0pt'><b><span style='font-size:11.0pt'>b.
+            <i>[Narrator/Translator]: </i></span></b><i><span style='font-size:11.0pt'>The
+            narrator reads the incoming CDR&rsquo;s spouse presentation. </span></i><span
+            style='font-size:11.0pt'><o:p></o:p></span></p>
+
+            <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>NARRATOR:
+            </span></b><span style='font-size:14.0pt'>
+
+            <span class="reviewing-spouse-rank-and-name">
+                  [Title (Mr./Ms./Other) and Name of Reviewing Officer&rsquo;s Spouse]
+            </span>
+
+            WILL NOW PRESENT A BOUQUET OF YELLOW ROSE BUDS TO
+
+            <span class="incoming-spouse-rank-and-name">
+                  [Title (Mr./Ms./Other) and Name of Incoming Commander&rsquo;s Spouse]
+            </span>
+
+            , TO REPRESENT
+            THE BEGINNING OF NEW RELATIONSHIPS THAT WILL SOON BE FORMED IN THE COMMAND AND
+            IN THE COMMUNITY. <o:p></o:p></span></p>
+
+            <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>TRANSLATOR</span></b><span
+            style='font-size:14.0pt'>: [HOST-NATION LANGUAGE TRANSLATION]. <o:p></o:p></span></p>
+      </div>
 
       <p class=Default style='margin-top:12.0pt'><b><span style='font-size:11.5pt'>5.
       Arrival of the Official Party. </span></b><span style='font-size:11.5pt'><o:p></o:p></span></p>
