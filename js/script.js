@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 var bugleBox = document.getElementById("bugle-checkbox");
 var flowerBox = document.getElementById("flowers-checkbox");
+var honorsBox = document.getElementById("honors-deferment-checkbox");
 var flowerInputs = $("#flower-presentation-inputs");
 var box2 = document.getElementById("box2");
 var box3 = document.getElementById("box3");
@@ -23,10 +24,14 @@ button.onclick = function(){
   // Outgoing/Incoming Commander Values
   var outgoing = getCommanderValues('outgoing');
   var incoming = getCommanderValues('incoming');
+  var reviewing = getCommanderValues('reviewing');
+  var cot = getCommanderValues('cot');
   var ncoy = getCommanderValues('ncoy');
   var rewiewingSpouse = getCommanderValues('reviewing-spouse');
   var incomingSpouse = getCommanderValues('incoming-spouse');
   var outgoingSpouse = getCommanderValues('outgoing-spouse');
+
+  console.log(incomingSpouse);
 
   // add or remove bugle
   if (! bugleBox.checked) {
@@ -35,10 +40,19 @@ button.onclick = function(){
     addBugle();
   };
 
+  // add or remove flower presentation
   if (flowerBox.checked) {
     addFlowers();
   } else {
     removeFlowers();
+  }
+
+  // add or remove deferment of honors
+  // checked indicates honors are being deferred
+  if (honorsBox.checked) {
+    addHonors();
+  } else {
+    removeHonors();
   }
 
   // Change unit name
@@ -53,6 +67,13 @@ button.onclick = function(){
   // Update outgoing/incoming commander's info
   changeCommanderInfo(outgoing);
   changeCommanderInfo(incoming);
+  changeCommanderInfo(reviewing);
+  changeCommanderInfo(cot);
+  changeCommanderInfo(ncoy);
+  changeCommanderInfo(rewiewingSpouse);
+  changeCommanderInfo(incomingSpouse);
+  changeCommanderInfo(outgoingSpouse);
+
 
   script.show();
 };
@@ -190,12 +211,14 @@ function getCommanderValues(status) {
     fullRankAndName: rank + ' ' + firstName + ' ' + lastName,
   }
 
-  console.log(commander);
   return commander;
 }
 
 function changeCommanderInfo(commander) {
-  return;
+  // Individuals status plus rank and name should be replaced with
+  // their full rank and name
+  var rankAndNameClass = '.' + commander.status + '-rank-and-name';
+  $(rankAndNameClass).html(commander.fullRankAndName);
 }
 
 function addFlowers() {
@@ -204,4 +227,12 @@ function addFlowers() {
 
 function removeFlowers() {
   // TODO
+}
+
+function removeHonors() {
+  $('.honors-deferment').hide();
+}
+
+function addHonors() {
+  $('.honors-deferment').show();
 }

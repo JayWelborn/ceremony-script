@@ -16,6 +16,9 @@
       <br>
       <input type="checkbox" id='flowers-checkbox'>
       Flower Presentation
+      <br>
+      <input type="checkbox" id='honors-deferment-checkbox'>
+      Defer Honors
       <!-- End yes/not options -->
       <br>
 
@@ -44,24 +47,40 @@
       <br>
       <!-- End Incoming commander info -->
 
+      <!-- Begin Reviewing Officer info -->
+      Reviewing Officer:&nbsp;
+      <input type="text" id='reviewing-rank-input' placeholder="Rank">
+      <input type='text' id='reviewing-first-input' placeholder='First Name'>
+      <input type="text" id='reviewing-last-input' placeholder="Last Name">
+      <br>
+      <!-- End Reviewing Officer info -->
+
+      <!-- Begin Commander of Troops info -->
+      Commander of Troops:&nbsp;
+      <input type="text" id='cot-rank-input' placeholder="Rank">
+      <input type='text' id='cot-first-input' placeholder='First Name'>
+      <input type="text" id='cot-last-input' placeholder="Last Name">
+      <br>
+      <!-- End Commander of Troops info -->
+
       <!-- Flower presentation info -->
       <div id='flower-presentation-inputs'>
 
             <br> For Flower Presentation <br>
             Unit NCO Of the Year (or person presenting flowers):&nbsp;
             <input type="text" id='ncoy-rank-input' placeholder="Rank or Title">
-            <input type='text' id='ncoy-first-name' placeholder='First Name'>
-            <input type="text" id='ncoy-last-name' placeholder="Last Name">
+            <input type='text' id='ncoy-first-input' placeholder='First Name'>
+            <input type="text" id='ncoy-last-input' placeholder="Last Name">
             <br>
             Reviewing Officer&rsquo;s spouse:&nbsp;
             <input type="text" id='reviewing-spouse-rank-input' placeholder="Rank or Title">
-            <input type='text' id='reviewing-spouse-first-name' placeholder='First Name'>
-            <input type="text" id='reviewing-spouse-last-name' placeholder="Last Name">
+            <input type='text' id='reviewing-spouse-first-input' placeholder='First Name'>
+            <input type="text" id='reviewing-spouse-last-input' placeholder="Last Name">
             <br>
             Incoming Commander&rsquo;s spouse:&nbsp;
             <input type="text" id='outgoing-spouse-rank-input' placeholder="Rank or Title">
-            <input type='text' id='outgoing-spouse-first-name' placeholder='First Name'>
-            <input type="text" id='outgoing-spouse-last-name' placeholder="Last Name">
+            <input type='text' id='outgoing-spouse-first-input' placeholder='First Name'>
+            <input type="text" id='outgoing-spouse-last-input' placeholder="Last Name">
             <br>
       </div>
       <!-- end flower presentation -->
@@ -198,7 +217,11 @@
       OF <span class='unit-name'>[Unit Name]</span>. <o:p></o:p></span></p>
 
       <p class=Default style='margin-top:12.0pt'><span style='font-size:14.0pt'>THE
-      COMMANDER OF TROOPS IS THE [Title], [Unit], [Rank and Full Name]. <o:p></o:p></span></p>
+      COMMANDER OF TROOPS IS THE [Title], [Unit],
+
+      <span class='cot-rank-and-name'>
+            [Rank and Full Name]
+      </span>. <o:p></o:p></span></p>
 
       <p class=Default style='margin-top:12.0pt'><span style='font-size:14.0pt'>PROVIDING
       THE MUSIC TODAY IS THE [MPT Name] OF THE UNITED STATES ARMY EUROPE BAND AND
@@ -579,10 +602,29 @@
 
       <p class=Default style='margin-top:12.0pt'><b><span style='font-size:14.0pt'>NARRATOR</span></b><span
       style='font-size:14.0pt'>: LADIES AND GENTLEMEN, PLEASE STAND FOR THE ARRIVAL
-      OF THE OFFICIAL PARTY AND REMAIN STANDING FOR THE RENDERING OF HONORS TO [Rank
-      and Full Name of Reviewing Officer]. [Rank and Full Name of Reviewing Officer]
-      DEFERS [HIS/HER] HONORS TODAY TO [Rank and Full Name of Outgoing Commander] IN
-      RECOGNITION OF [HIS/HER] SUCCESSFUL TIME AS THE COMMANDER OF THE <span class='unit-name'>[Unit Name]</span>. <o:p></o:p></span></p>
+      OF THE OFFICIAL PARTY AND REMAIN STANDING FOR THE RENDERING OF HONORS TO
+
+      <span class="reviewing-rank-and-name">
+            [Rank and Full Name of Reviewing Officer]
+      </span>.&nbsp;
+
+      <!-- Honors Deferment -->
+      <div class='honors-deferment'>
+            <span class="reviewing-rank-and-name">
+                  [Rank and Full Name of Reviewing Officer]
+            </span>&nbsp;
+
+            DEFERS [HIS/HER] HONORS TODAY TO
+
+            <span class="outgoing-rank-and-name">
+                  [Rank and Full Name of Outgoing Commander]
+            </span>
+            IN RECOGNITION OF [HIS/HER] SUCCESSFUL TIME AS THE COMMANDER OF THE
+
+            <span class='unit-name'>[Unit Name]</span>.
+            <o:p></o:p></span></p>
+      </div>
+      <!-- End Honors Deferment -->
 
       <p class=Default style='margin-top:12.0pt;page-break-before:always'><b><span
       style='font-size:14.0pt'>TRANSLATOR: </span></b><span style='font-size:14.0pt'>[HOST-NATION
