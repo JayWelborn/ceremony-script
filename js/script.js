@@ -217,8 +217,10 @@ function getCommanderValues(status) {
 function changeCommanderInfo(commander) {
   // Individuals status plus rank and name should be replaced with
   // their full rank and name
-  var rankAndNameClass = '.' + commander.status + '-rank-and-name';
-  $(rankAndNameClass).html(commander.fullRankAndName);
+  if(commander){
+    var rankAndNameClass = '.' + commander.status + '-rank-and-name';
+    $(rankAndNameClass).html(commander.fullRankAndName);
+  }
 }
 
 function addFlowers() {
