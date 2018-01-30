@@ -1,7 +1,16 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
+
+// JS processors
 var browserify = require('gulp-browserify');
-var uglify = require('gulp-uglify');
+var uglify     = require('gulp-uglify');
+
+// CSS/SCSS processors
+var autoprefixer = require('autoprefixer');
+var concat       = require('gulp-concat');
+var postcss      = require('gulp-postcss');
+var sass         = require('gulp-sass');
+var sourcemaps   = require('gulp-sourcemaps');
 
 // process JS files and return the stream.
 gulp.task('js', function () {
@@ -23,23 +32,39 @@ gulp.task('reload', function() {
     browserSync.reload();
 })
 
+// Process sass files and output prefixed css
+gulp.task('styles', function() {
+    gulp.src('./styles/sass/main.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(concat('main.css'))
+        .pipe(sourcemaps.init())
+        .pipe(postcss([autoprefixer() ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./styles/'));
+});
+
+// Place all watch tasks in one function for readability
+gulp.task('watch', function() {
+    // Concat styles on sass or scss file change
+    gulp.watch('./**/*.{sass, scss}', ['styles']);
+
+    // Perform js tasks when js files change
+    gulp.watch("js/*.js", ['js-watch']);
+
+    // Reload on change of any source files
+    gulp.watch('./**/*.{sass,scss,css,html,py,js}', ['reload']);
+
+})
+
 // use default task to launch Browsersync and watch JS files
-gulp.task('default', ['js'], function () {
+gulp.task('default', ['js', 'watch'], function () {
 
     // Serve files from the root of this project
     browserSync.init({
         server: {
             baseDir: "./"
-        }
+        },
+        notify: true,
+        browser: ['google chrome', 'firefox']
     });
-
-    // add browserSync.reload to the tasks array to make
-    // all browsers reload after tasks are complete.
-    gulp.watch("js/*.js", ['js-watch']);
-
-    // reload whenever HTML files are updated
-    gulp.watch("./*.html", ['reload']);
-
-    // reload when SASS files are updated
-    gulp.watch("./**/*.SASS", ['reload']);
 });

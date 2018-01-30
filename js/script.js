@@ -192,7 +192,6 @@ function changeDate(date) {
 
 function changeTime(time) {
   if (time) {
-    console.log(time);
     $('.ceremony-time').html(time);
   }
 }
@@ -217,7 +216,8 @@ function getCommanderValues(status) {
 function changeCommanderInfo(commander) {
   // Individuals status plus rank and name should be replaced with
   // their full rank and name
-  if(commander){
+  console.log(commander)
+  if(commander.firstName && commander.lastName){
     var rankAndNameClass = '.' + commander.status + '-rank-and-name';
     $(rankAndNameClass).html(commander.fullRankAndName);
   }
