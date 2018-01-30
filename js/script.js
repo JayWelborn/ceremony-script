@@ -224,11 +224,11 @@ function changeCommanderInfo(commander) {
 }
 
 function addFlowers() {
-  // TODO
+  $('.flower-remove').show();
 }
 
 function removeFlowers() {
-  // TODO
+  $('.flower-remove').hide();
 }
 
 function removeHonors() {
