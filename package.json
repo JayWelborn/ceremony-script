@@ -9,12 +9,17 @@
   "author": "Jay Welborn",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^7.2.5",
     "browser-sync": "^2.23.6",
     "browserify": "^15.2.0",
     "browsersync": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0"
   }
 }

@@ -28,12 +28,13 @@ gulp.task('js-watch', ['js'], function (done) {
 });
 
 // general reload script for mutliple file types
-gulp.task('reload', function() {
+gulp.task('reload', function(done) {
     browserSync.reload();
+    done();
 })
 
 // Process sass files and output prefixed css
-gulp.task('styles', function() {
+gulp.task('styles', ['reload'], function(done) {
     gulp.src('./styles/sass/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('main.css'))
@@ -41,24 +42,24 @@ gulp.task('styles', function() {
         .pipe(postcss([autoprefixer() ]))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./styles/'));
+
+    done();
 });
 
 // Place all watch tasks in one function for readability
 gulp.task('watch', function() {
     // Concat styles on sass or scss file change
-    gulp.watch('./**/*.{sass, scss}', ['styles']);
+    gulp.watch('**/*.{sass,scss}', ['styles']);
 
     // Perform js tasks when js files change
     gulp.watch("js/*.js", ['js-watch']);
 
     // Reload on change of any source files
-    gulp.watch('./**/*.{sass,scss,css,html,py,js}', ['reload']);
+    gulp.watch('**/*.{css,html}', ['reload']);
 
 })
 
-// use default task to launch Browsersync and watch JS files
-gulp.task('default', ['js', 'watch'], function () {
-
+gulp.task('browsersync', function() {
     // Serve files from the root of this project
     browserSync.init({
         server: {
@@ -67,4 +68,7 @@ gulp.task('default', ['js', 'watch'], function () {
         notify: true,
         browser: ['google chrome', 'firefox']
     });
-});
+})
+
+// use default task to launch Browsersync and watch JS files
+gulp.task('default', ['js', 'browsersync', 'watch']);
