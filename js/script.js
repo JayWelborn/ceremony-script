@@ -152,7 +152,7 @@ function shiftLetters() {
   $('.letter-v').html('u.');
   $('.letter-w').html('v.');
   $('.letter-x').html('w.');
-  $('.letter-l-double').html('j');
+  $('.letter-l-double').html('j.');
 }
 
 function restoreLetters() {
@@ -175,7 +175,7 @@ function restoreLetters() {
   $('.letter-v').html('v.');
   $('.letter-w').html('w.');
   $('.letter-x').html('x.');
-  $('.letter-l-double').html('l');
+  $('.letter-l-double').html('l.');
 }
 
 function changeUnitName(unitName) {
