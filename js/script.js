@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+// globals are bad, I know.
 var bugleBox = document.getElementById("bugle-checkbox");
 var flowerBox = document.getElementById("flowers-checkbox");
 var honorsBox = document.getElementById("honors-deferment-checkbox");
@@ -8,18 +9,35 @@ var box2 = document.getElementById("box2");
 var box3 = document.getElementById("box3");
 var button = document.getElementById("submit");
 var script = $("#script");
+
+// hide irrelevant things at first
 script.hide();
 flowerInputs.hide();
 
+// handle showing/hiding flower input form
 flowerBox.onclick = function() {
   flowerInputs.toggle();
 }
+
+// disable defer honors checkbox if
+// outgoing commander's rank is too low.
+// re-enable if rank changes to become high enough
+$("#outgoing-rank-input").change(function(event) {
+  var deferrable = ['GEN', 'LTG', 'MG', 'BG'];
+  if (deferrable.indexOf(event.currentTarget.value) === -1) {
+    $('#honors-deferment-checkbox').prop('disabled', true);
+  } else {
+    $('#honors-deferment-checkbox').prop('disabled', false);
+  }
+});
+
+
 
 button.onclick = function(){
   // Get unit/date/time input values;
   var unitName = $('#unit-name-input').val();
   var date = new Date($('#ceremony-date-input').val());
-  console.log(date);
+  // console.log(date);
   var time = $('#ceremony-time-input').val();
 
   // Outgoing/Incoming Commander Values
@@ -32,7 +50,7 @@ button.onclick = function(){
   var incomingSpouse = getCommanderValues('incoming-spouse');
   var outgoingSpouse = getCommanderValues('outgoing-spouse');
 
-  console.log(incomingSpouse);
+  // console.log(incomingSpouse);
 
   // add or remove bugle
   if (! bugleBox.checked) {
@@ -186,7 +204,7 @@ function changeUnitName(unitName) {
 }
 
 function changeDate(date) {
-  if (date) {
+  if (!isNaN(date.getDate())) {
 
     var months = [
       "Jan", "Feb", "Mar",
@@ -201,7 +219,7 @@ function changeDate(date) {
     ];
 
     var weekDay = days[date.getDay()];
-    console.log(weekDay);
+    // console.log(weekDay);
     var day = date.getDate();
     var month = months[date.getMonth()];
     var year = date.getFullYear();
@@ -238,7 +256,6 @@ function getCommanderValues(status) {
 function changeCommanderInfo(commander) {
   // Individuals status plus rank and name should be replaced with
   // their full rank and name
-  console.log(commander)
   if(commander.firstName && commander.lastName){
     var rankAndNameClass = '.' + commander.status + '-rank-and-name';
     $(rankAndNameClass).html(commander.fullRankAndName);
