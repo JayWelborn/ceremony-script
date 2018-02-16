@@ -14,29 +14,37 @@
   <!-- Begin Form -->
   <div id="script-generator" class="card">
 
+    <h1>USAREUR Ceremony Script Generator</h1>
+
+    <h2>Ceremony Information</h2>
+
     <!-- Begin yes/no options -->
+    <label for="bugle-checkbox">Bugle:</label>
     <input type="checkbox" name="bugle" id="bugle-checkbox">
-    Bugle
-    <br>
+
+    <label for="flowers-checkbox">Flower Presentation:</label>
     <input type="checkbox" id='flowers-checkbox'>
-    Flower Presentation
-    <br>
+
+    <label for="honors-deferment-checkbox">Defer Honors:</label>
     <input type="checkbox" id='honors-deferment-checkbox'>
-    Defer Honors
     <!-- End yes/not options -->
+
     <br>
 
     <!-- Ceremony Date/Time info -->
+    <label for="unit-name-input">Unit:</label>
     <input type="text" name="Unit Name" id="unit-name-input" placeholder="Unit Name">
     <br>
-    Date: <input type="date" name="Date" id="ceremony-date-input">
+    <label for="ceremony-date-input">Date:</label>
+    <input type="date" name="Date" id="ceremony-date-input">
     <br>
-    Time: <input type="time" id='ceremony-time-input'>
+    <label for="ceremony-time-input">Time:</label>
+    <input type="time" id='ceremony-time-input'>
     <br>
     <!-- End date/time info -->
 
     <!-- Begin Outgoing Commander info -->
-    Outgoing Commander:&nbsp;
+    <label for="outgoing-rank-input">Outgoing Commander:</label>
     <input type="text" id='outgoing-rank-input' placeholder="Rank">
     <input type='text' id='outgoing-first-input' placeholder='First Name'>
     <input type="text" id='outgoing-last-input' placeholder="Last Name">
@@ -44,7 +52,7 @@
     <!-- End outgoing commander info -->
 
     <!-- Begin Incoming Commander info -->
-    Incoming Commander:&nbsp;
+    <label for="incoming-rank-input">Incoming Commander:</label>
     <input type="text" id='incoming-rank-input' placeholder="Rank">
     <input type='text' id='incoming-first-input' placeholder='First Name'>
     <input type="text" id='incoming-last-input' placeholder="Last Name">
@@ -52,7 +60,7 @@
     <!-- End Incoming commander info -->
 
     <!-- Begin Reviewing Officer info -->
-    Reviewing Officer:&nbsp;
+    <label for="reviewing-rank-input">Reviewing Officer:</label>
     <input type="text" id='reviewing-rank-input' placeholder="Rank">
     <input type='text' id='reviewing-first-input' placeholder='First Name'>
     <input type="text" id='reviewing-last-input' placeholder="Last Name">
@@ -60,7 +68,7 @@
     <!-- End Reviewing Officer info -->
 
     <!-- Begin Commander of Troops info -->
-    Commander of Troops:&nbsp;
+    <label for="cot-rank-input">Commander of Troops</label>
     <input type="text" id='cot-rank-input' placeholder="Rank">
     <input type='text' id='cot-first-input' placeholder='First Name'>
     <input type="text" id='cot-last-input' placeholder="Last Name">
@@ -70,27 +78,35 @@
     <!-- Flower presentation info -->
     <div id='flower-presentation-inputs'>
 
-      <br> For Flower Presentation <br>
+      <h2> For Flower Presentation </h2>
 
-      Unit NCO Of the Year (or person presenting flowers):&nbsp;
+      <label for="ncoy-rank-input">
+        Unit NCO Of the Year (or person presenting flowers):
+      </label>
       <input type="text" id='ncoy-rank-input' placeholder="Rank or Title">
       <input type='text' id='ncoy-first-input' placeholder='First Name'>
       <input type="text" id='ncoy-last-input' placeholder="Last Name">
       <br>
 
-      Outgoing Commander&rsquo;s spouse:&nbsp;
+      <label for="outgoing-spouse-rank-input">
+        Outgoing Commander&rsquo;s spouse:
+      </label>
       <input type="text" id='outgoing-spouse-rank-input' placeholder="Rank or Title">
       <input type='text' id='outgoing-spouse-first-input' placeholder='First Name'>
       <input type="text" id='outgoing-spouse-last-input' placeholder="Last Name">
       <br>
 
-      Incoming Commander&rsquo;s spouse:&nbsp;
+      <label for="incoming-spouse-rank-input">
+        Incoming Commander&rsquo;s spouse:
+      </label>
       <input type="text" id='incoming-spouse-rank-input' placeholder="Rank or Title">
       <input type='text' id='incoming-spouse-first-input' placeholder='First Name'>
       <input type="text" id='incoming-spouse-last-input' placeholder="Last Name">
       <br>
 
-      Reviewing Officer&rsquo;s spouse:&nbsp;
+      <label for="reviewing-spouse-rank-input">
+        Reviewing Commander&rsquo;s spouse:
+      </label>
       <input type="text" id='reviewing-spouse-rank-input' placeholder="Rank or Title">
       <input type='text' id='reviewing-spouse-first-input' placeholder='First Name'>
       <input type="text" id='reviewing-spouse-last-input' placeholder="Last Name">
@@ -117,7 +133,6 @@
     </h2>
 
     <h2 class='center'>
-      <span>[Day of Week]</span>,
       <span class='ceremony-date'>[Date]</span>,
       <span class='ceremony-time'>[Time]</span>
     </h2>
@@ -1463,434 +1478,432 @@
       [HOST-NATION LANGUAGE TRANSLATION]. </p>
     </div>
 
-    <p><b><span style='font-size:11.0pt'>b.
-    <i>[Reviewing Party]: </i></span></b><i><span style='font-size:11.0pt'>The
-    reviewing party will move toward the colors. The outgoing CDR positions him or
-    herself 4 steps in front of his or her organizational colors. The outgoing CDR
-    is directly to the right of the reviewing officer, the incoming CDR is to the
-    left of the reviewing officer. The outgoing and incoming CDRs then take 1 step
-    forward and execute simultaneous facing movements to face each other. The
-    reviewing officer or either of the CDRs (as chosen during rehearsal) may give
-    softly spoken commands to synchronize movements. </span></i><span
-    style='font-size:11.0pt'></span></p>
+    <div class="note">
+      <p><b>b.
+      <i>[Reviewing Party]: </i></b><i>The
+      reviewing party will move toward the colors. The outgoing CDR positions him or
+      herself 4 steps in front of his or her organizational colors. The outgoing CDR
+      is directly to the right of the reviewing officer, the incoming CDR is to the
+      left of the reviewing officer. The outgoing and incoming CDRs then take 1 step
+      forward and execute simultaneous facing movements to face each other. The
+      reviewing officer or either of the CDRs (as chosen during rehearsal) may give
+      softly spoken commands to synchronize movements. </i></p>
 
-    <p><b><span style='font-size:11.0pt'>c.
-    <i>[CSM]: </i></span></b><i><span style='font-size:11.0pt'>The brigade CSM
-    moves from his position behind the colors and removes the organizational colors
-    from the color bearer&rsquo;s sling (with his right hand above his left hand) and
-    faces about. </span></i><span style='font-size:11.0pt'></span></p>
+      <p><b>c.
+      <i>[CSM]: </i></b><i>The brigade CSM
+      moves from his position behind the colors and removes the organizational colors
+      from the color bearer&rsquo;s sling (with his right hand above his left hand) and
+      faces about. </i></p>
 
-    <p><b><i><span style='font-size:11.0pt'>&lt;&lt;CUE:
-    </span></i></b><i><span style='font-size:11.0pt'>Immediately after the CSM
-    secures the unit colors<span class=GramE>.<b>&gt;</b></span><b>&gt; </b></span></i><span
-    style='font-size:11.0pt'></span></p>
+      <p><b><i>&lt;&lt;CUE:
+      </i></b><i>Immediately after the CSM
+      secures the unit colors.<b>&gt;&gt; </b></i>></p>
 
-    <p><b><span style='font-size:11.0pt'>d.
-    <i>[Narrator]: </i></span></b><i><span style='font-size:11.0pt'>The narrator
-    reads the assumption-of-command order. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:14.0pt'>NARRATOR
-    (ENGLISH ONLY): </span></b><span style='font-size:14.0pt'>BY AUTHORITY OF ARMY
-    REGULATION 600-20, PARAGRAPH 2-5A, THE UNDERSIGNED ASSUMES COMMAND OF <span class="unit-name">[Unit
-    Name]</span> EFFECTIVE <span class='ceremony-date'>[Date]</span>. SIGNED [Name of the Undersigned], UNITED STATES ARMY,
-    COMMANDING. </span></p>
-
-    <p><b><span style='font-size:11.0pt'>e.
-    <i>[CSM/Reviewing Officer/Incoming and Outgoing CDRs]: </i></span></b><i><span
-    style='font-size:11.0pt'>After the reading, the CSM steps forward and presents
-    the organizational colors to the outgoing CDR, who grasps the organizational
-    colors with his left hand above his right hand. The outgoing (now previous) CDR
-    passes the organizational colors to the reviewing officer (senior CDR), who
-    grasps the colors with his or her right hand above his or her left hand. The
-    reviewing officer passes the organizational colors to the new (former incoming)
-    CDR, who grasps the colors with his or her left hand above his or her right
-    hand. The new CDR passes the organizational colors to the CSM, who grasps the
-    colors with his or her right hand above his or her left hand, faces about, and
-    returns the organizational colors to the color bearer&rsquo;s sling. </span></i><span
-    style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>f.
-    <i>[Previous and New CDRs]: </i></span></b><i><span style='font-size:11.0pt'>As
-    the CSM faces about, both CDRs execute facing movements back to their original
-    direction facing the colors. The CSM and the reviewing party face about and
-    return to their posts. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>g.
-    <i>[CSM]: </i></span></b><i><span style='font-size:11.0pt'>The CSM returns to
-    his or her position behind the colors. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>h.
-    <i>[Reviewing Officer]: </i></span></b><i><span style='font-size:11.0pt'>The
-    reviewing officer moves back to the reviewing stand. </span></i><span
-    style='font-size:11.0pt'></span></p>
-
-    <p><span class=SpellE><b><span
-    style='font-size:11.0pt'>i</span></b></span><b><span style='font-size:11.0pt'>.
-    <i>[Previous and New CDRs]: </i></span></b><i><span style='font-size:11.0pt'>The
-    previous and new CDRs hesitate slightly and then cross behind the reviewing
-    officer switching places. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.5pt'>10.
-    Remarks. </span></b></p>
-
-    <p><b><i><span style='font-size:11.0pt'>&lt;&lt;CUE:
-    </span></i></b><i><span style='font-size:11.0pt'>The official party is now in
-    position on the reviewing stand<span class=GramE>.<b>&gt;</b></span><b>&gt; </b></span></i><span
-    style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>a.
-    <i>[Narrator]: </i></span></b><i><span style='font-size:11.0pt'>The narrator
-    introduces the reviewing officer. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><span style='font-size:11.0pt'>&nbsp;</span></p>
-
-    <p><b><span
-    style='font-size:14.0pt'>NARRATOR: </span></b><span style='font-size:14.0pt'>LADIES
-    AND GENTLEMEN, THE [Unit] COMMANDER, [Rank and Full Name of Reviewing Officer].
-    </span></p>
-
-    <p><b><span style='font-size:11.0pt'>b.
-    <i>[Reviewing Officer]: </i></span></b><i><span style='font-size:11.0pt'>The
-    reviewing officer moves to the speaker position to give his or her remarks,
-    then returns to the reviewing stand or takes the seat next to his or her
-    spouse. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>c.
-    <i>[Narrator]: </i></span></b><i><span style='font-size:11.0pt'>The narrator
-    introduces the previous CDR. No reference is made to him or her as the outgoing
-    commander. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:14.0pt'>NARRATOR:
-    </span></b><span style='font-size:14.0pt'>LADIES AND GENTLEMEN, [Rank and Full
-    Name of Previous CDR]. </span></p>
-
-    <p><b><span style='font-size:11.0pt'>d.
-    <i>[Previous CDR]: </i></span></b><i><span style='font-size:11.0pt'>The
-    previous CDR moves to the speaker position to give his or her remarks, then
-    returns to the reviewing stand or takes the seat next to his or her spouse. </span></i><span
-    style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>e.
-    <i>[Narrator]: </i></span></b><i><span style='font-size:11.0pt'>The narrator
-    introduces the new CDR. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:14.0pt'>NARRATOR:
-    </span></b><span style='font-size:14.0pt'>LADIES AND GENTLEMEN, THE COMMANDER
-    OF <span class='unit-name'>[Unit Name]</span>, [Rank and Full Name of New CDR]. </span></p>
-
-    <p><b><span style='font-size:11.0pt'>f.
-    <i>[New CDR]: </i></span></b><i><span style='font-size:11.0pt'>The new CDR
-    moves to the speaker position to give his or her remarks, then returns to the
-    reviewing stand. </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.5pt'>11.
-    Pass in Review. </span></b></p>
-
-    <p><b><i><span style='font-size:11.0pt'>&lt;&lt;CUE:
-    </span></i></b><i><span style='font-size:11.0pt'>The new commander is in his or
-    her position on the reviewing stand<span class=GramE>.<b>&gt;</b></span><b>&gt;
-    </b></span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>a.
-    <i>[COT]: </i></span></b><i><span style='font-size:11.0pt'>The COT comes to
-    &ldquo;Attention,&rdquo; faces about, and directs the <span class='bugle-cue-atn'>bugler to sound &ldquo;Attention.&rdquo;</span> </span></i><span
-    style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:14.0pt'>COT:
-    </span></b><span style='font-size:14.0pt' class='sound-atn'>SOUND ATTENTION. </span></p>
-
-    <p><b><span style='font-size:11.0pt'>b.
-    <i class='bugle-cue'>[Bugler]: </i></span></b><i><span style='font-size:11.0pt' class="bugle-cue-atn">The bugler sounds
-    &ldquo;Attention.&rdquo; </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>c.
-    <i>[Units]: </i></span></b><i><span style='font-size:11.0pt'>The units take the
-    position of &ldquo;Attention.&rdquo; </span></i><span style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:11.0pt'>d.
-    <i>[COT]: </i></span></b><i><span style='font-size:11.0pt'>The COT directs <span class="bugle-remove">the
-    bugler to sound </span>&ldquo;Colors,&rdquo; &ldquo;Post,&rdquo; and &ldquo;March.&rdquo; </span></i><span
-    style='font-size:11.0pt'></span></p>
-
-    <p><b><span style='font-size:14.0pt'>COT:
-    </span></b><span style='font-size:14.0pt' class='sound-cpm'>SOUND COLORS, POST,
-    &lt;&lt;Pause&gt;&gt;, MARCH. </span></p>
-
-    <div class="bugle-remove">
-      <p><b><span style='font-size:11.0pt' >e.
-      <i class='bugle-cue'>[Bugler]: </i></span></b><i><span style='font-size:11.0pt'>The bugler sounds
-      &ldquo;Colors,&rdquo; &ldquo;Post,&rdquo; and &ldquo;March.&rdquo; </span></i><span style='font-size:11.0pt'></span></p>
+      <p><b>d.
+      <i>[Narrator]: </i></b><i>The narrator
+      reads the assumption-of-command order. </i></p>
     </div>
 
-    <p><b><span style='font-size:11.0pt' class="letter-f">f.
-    <i>[Unit CDRs/Colors]: </i></span></b><i><span style='font-size:11.0pt'>On the
-    <span class="prep-note">first stinger</span>, unit CDRs and colors execute &ldquo;About Face.&rdquo; </span></i><span
-    style='font-size:11.0pt'></span></p>
+    <p class="narration"><b>NARRATOR
+    (ENGLISH ONLY): </b>BY AUTHORITY OF ARMY
+    REGULATION 600-20, PARAGRAPH 2-5A, THE UNDERSIGNED ASSUMES COMMAND OF <span class="unit-name">[Unit
+    Name]</span> EFFECTIVE <span class='ceremony-date'>[Date]</span>. SIGNED [Name of the Undersigned], UNITED STATES ARMY,
+    COMMANDING. </p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-g">g.
-    <i>[Color Guard]: </i></span></b><i><span style='font-size:11.0pt'>On the <span class="prep-note">first stinger</span>, the color guard executes &ldquo;Reverse March.&rdquo; </span></i><span
-    style='font-size:11.0pt'></span></p>
+    <div class="note">
+      <p><b>e.
+      <i>[CSM/Reviewing Officer/Incoming and Outgoing CDRs]: </i></b><i>After the reading, the CSM steps forward and presents
+      the organizational colors to the outgoing CDR, who grasps the organizational
+      colors with his left hand above his right hand. The outgoing (now previous) CDR
+      passes the organizational colors to the reviewing officer (senior CDR), who
+      grasps the colors with his or her right hand above his or her left hand. The
+      reviewing officer passes the organizational colors to the new (former incoming)
+      CDR, who grasps the colors with his or her left hand above his or her right
+      hand. The new CDR passes the organizational colors to the CSM, who grasps the
+      colors with his or her right hand above his or her left hand, faces about, and
+      returns the organizational colors to the color bearer&rsquo;s sling. </i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-h">h.
-    <i>[Staff]: </i></span></b><i><span style='font-size:11.0pt'>On the <span class="prep-note">first stinger</span>, the staff executes &ldquo;Left Face.&rdquo; </span></i><span style='font-size:
-    11.0pt'></span></p>
+      <p><b>f.
+      <i>[Previous and New CDRs]: </i></b><i>As
+      the CSM faces about, both CDRs execute facing movements back to their original
+      direction facing the colors. The CSM and the reviewing party face about and
+      return to their posts. </i></p>
 
-    <p><span
-    class=SpellE><b><span style='font-size:11.0pt' class="letter-i">i.</span></b></span><b><span
-    style='font-size:11.0pt'> <i>[Unit CDRs and Colors]: </i></span></b><i><span
-    style='font-size:11.0pt'>On the <span class='exec-note'>second stinger</span>, unit CDRs and colors star-burst
-    and <span class=GramE>march</span> back to their units on the most direct
-    route, halt, and execute a facing movement to face the reviewing stand. </span></i><span
-    style='font-size:11.0pt'></span></p>
+      <p><b>g.
+      <i>[CSM]: </i></b><i>The CSM returns to
+      his or her position behind the colors. </i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-j">j.
-    <i>[CSM/Color Guard]: </i></span></b><i><span style='font-size:11.0pt'>On the
-    <span class='exec-note'>second stinger</span>, the CSM marches the color guard back to the formation of
-    troops, executes &ldquo;Colors, Reverse, March,&rdquo; and halts in the original position. </span></i><span
-    style='font-size:11.0pt'></span></p>
+      <p><b>h.
+      <i>[Reviewing Officer]: </i></b><i>The
+      reviewing officer moves back to the reviewing stand. </i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-k">k.
-    <i>[COT]: </i></span></b><i><span style='font-size:11.0pt'>Once the colors have
-    cleared, the COT returns the staff to its original position centered on the
-    formation and then directs the staff to &ldquo;Right Face.&rdquo; </span></i><span
-    style='font-size:11.0pt'></span></p>
+      <p><b>i.
+      <i>[Previous and New CDRs]: </i></b><i>The
+      previous and new CDRs hesitate slightly and then cross behind the reviewing
+      officer switching places. </i></p>
+    </div>
 
-    <p><b><span style='font-size:14.0pt'>COT:
-    </span></b><span style='font-size:14.0pt'>RIGHT FACE. </span></p>
+    <p class="phase"><b>10.
+    Remarks. </b></p>
 
-    <p><b><i><span style='font-size:11.0pt'>[COT]:
-    </span></i></b><i><span style='font-size:11.0pt'>The COT executes &ldquo;Left Face&rdquo;
-    and waits until all units and colors are in position, at which time he or she
-    faces about. </span></i><span style='font-size:11.0pt'></span></p>
+    <div class="note">
+      <p><b><i>&lt;&lt;CUE:
+      </i></b><i>The official party is now in
+      position on the reviewing stand.<b>&gt;&gt; </b></i></p>
 
-    <p><b><i><span style='font-size:11.0pt'>&lt;&lt;CUE:
-    </span></i></b><i><span style='font-size:11.0pt'>The COT faces the hosting
-    commander on the reviewing stand<span class=GramE>.<b>&gt;</b></span><b>&gt; </b></span></i><span
-    style='font-size:11.0pt'></span></p>
+      <p><b>a.
+      <i>[Narrator]: </i></b><i>The narrator
+      introduces the reviewing officer. </i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-l">l.
-    <i>[New CDR]: </i></span></b><i><span style='font-size:11.0pt'>The new CDR
-    commands to &ldquo;Pass in Review.&rdquo; </span></i><span style='font-size:11.0pt'></span></p>
+      <p>&nbsp;</p>
+    </div>
 
-    <p><b><span style='font-size:14.0pt'>NEW
-    CDR: </span></b><span style='font-size:14.0pt'>PASS IN REVIEW. </span></p>
+    <p class="narration"><b>NARRATOR: </b>LADIES
+    AND GENTLEMEN, THE [Unit] COMMANDER, [Rank and Full Name of Reviewing Officer].
+    </p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-m">m.
-    <i>[COT]: </i></span></b><i><span style='font-size:11.0pt'>The COT directs the
-    units to &ldquo;Pass in Review.&rdquo; </span></i><span style='font-size:11.0pt'></span></p>
+    <div class="note">
+      <p><b>b.
+      <i>[Reviewing Officer]: </i></b><i>The
+      reviewing officer moves to the speaker position to give his or her remarks,
+      then returns to the reviewing stand or takes the seat next to his or her
+      spouse. </i></p>
 
-    <p><b><span style='font-size:14.0pt'>COT:
-    </span></b><span style='font-size:14.0pt'>PASS IN REVIEW. </span></p>
+      <p><b>c.
+      <i>[Narrator]: </i></b><i>The narrator
+      introduces the previous CDR. No reference is made to him or her as the outgoing
+      commander. </i></p>
+    </div>
 
-    <p><b><span style='font-size:11.0pt' class="letter-n">n.
-    <i>[Unit CDRs/COT]: </i></span></b><i><span style='font-size:11.0pt'>Unit CDRs
-    face to the right, the COT then faces to the left. </span></i><span
-    style='font-size:11.0pt'></span></p>
+    <p class="narration"><b>NARRATOR:
+    </b>LADIES AND GENTLEMEN, [Rank and Full
+    Name of Previous CDR]. </p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-o">o.
-    <i>[Band]: </i></span></b><i><span style='font-size:11.0pt'>The Band director
-    raises his baton, and as the right-flank commander commands &ldquo;Right Turn,
-    March,&rdquo; the Band begins to play and to march forward onto the line of <span
-    class=GramE>march</span>. </span></i><span style='font-size:11.0pt'></span></p>
+    <div class="note">
+        <p><b>d.
+      <i>[Previous CDR]: </i></b><i>>The
+      previous CDR moves to the speaker position to give his or her remarks, then
+      returns to the reviewing stand or takes the seat next to his or her spouse. </i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-p">p.
-    <i>[Formations]: </i></span></b><i><span style='font-size:11.0pt'>Formations
-    move out in succession and follow the Band in columns. Organizational colors do
-    a wheel to fall behind unit CDRs as they march forward. Formations execute a
-    right turn on a parallel path with unit <span class=SpellE>CDRs.</span>
-    Formations will be in line with and parallel to unit CDRs until the first left
-    turn. After the first left turn, units will be centered on and behind unit
-    commanders and their colors. </span></i><span style='font-size:11.0pt'></span></p>
+      <p><b>e.
+      <i>[Narrator]: </i></b><i>The narrator
+      introduces the new CDR. </i></p>
+    </div>
 
-    <p><b><i><span style='font-size:11.0pt'>&lt;&lt;NOTE:
-    </span></i></b><i><span style='font-size:11.0pt'>There will be 6 steps between
-    unit CDRs and organizational colors, and 12 steps between organizational colors
-    and platoon formations<span class=GramE>.<b>&gt;</b></span><b>&gt; </b></span></i><span
-    style='font-size:11.0pt'></span></p>
+    <p class="narration"><b>NARRATOR:
+    </b>LADIES AND GENTLEMEN, THE COMMANDER
+    OF <span class='unit-name'>[Unit Name]</span>, [Rank and Full Name of New CDR]. </p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-q">q.
-    <i>[Units]: </i></span></b><i><span style='font-size:11.0pt'>Units will execute
-    two left turns before moving onto the reviewing line. </span></i><span
-    style='font-size:11.0pt'></span></p>
+    <p class="note"><b>f.
+    <i>[New CDR]: </i></b><i>The new CDR
+    moves to the speaker position to give his or her remarks, then returns to the
+    reviewing stand. </i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-r">r.
-    <i>[Band/Units]: </i></span></b><i><span style='font-size:11.0pt'>The Band and
-    each following unit change direction at points indicated by markers. When a
-    unit reaches the turn marker, the unit CDR commands &ldquo;Left Turn, March.&rdquo; As soon
-    as the unit has completed the turn, the unit CDR commands &ldquo;Forward March.&rdquo; </span></i><span
-    style='font-size:11.0pt'></span></p>
+    <p class="phase"><b>11.
+    Pass in Review. </b></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-s">s.
-    <i>[COT/Staff]: </i></span></b><i><span style='font-size:11.0pt'>On the command
-    &ldquo;Right Turn&rdquo;, (pause), &ldquo;March&rdquo; by the CDR of the unit next to the Band, the COT
-    and his or her staff move to a marching position 12 steps in front of the drum
-    major (on the reviewing line). </span></i><span style='font-size:11.0pt'></span></p>
+    <div class="note">
+      <p><b><i>&lt;&lt;CUE:
+      </i></b><i>The new commander is in his or
+      her position on the reviewing stand.<b>&gt;&gt;
+      </b></i></p>
 
-    <p><b><i><span
-    style='font-size:11.0pt'>&lt;&lt;CUE: </span></i></b><i><span style='font-size:
-    11.0pt'>Before the units pass the reviewing stand<span class=GramE>.<b>&gt;</b></span><b>&gt;
-    </b></span></i><span style='font-size:11.0pt'></span></p>
+      <p><b>a.
+      <i>[COT]: </i></b><i>The COT comes to
+      &ldquo;Attention,&rdquo; faces about, and directs the <span class='bugle-cue-atn'>bugler
+      to sound &ldquo;Attention.&rdquo;</span> </i></p>
+    </div>
 
-    <p><b><span style='font-size:14.0pt'>NARRATOR:
-    </span></b><span style='font-size:14.0pt'>PLEASE STAND AND RENDER THE
-    APPROPRIATE HONORS TO THE NATIONAL COLORS AS THEY PASS. </span></p>
+    <p class="narration"><b>COT:
+    </b><span class='sound-atn'>SOUND ATTENTION. </span></p>
 
-    <p><span style='font-size:14.0pt'>THE
-    COMMANDER OF TROOPS FOR TODAY&rsquo;S CEREMONY IS [Duty Position, Unit, Rank, and
-    Full Name] FROM [City and State]. </span></p>
+    <div class="note">
+      <p><b>b.
+      <i class='bugle-cue'>[Bugler]: </i></b><i><span class="bugle-cue-atn">The bugler sounds
+      &ldquo;Attention.&rdquo; </span></i></p>
 
-    <p><span style='font-size:14.0pt'>THE
-    UNITED STATES ARMY EUROPE BAND IS UNDER THE COMMAND OF [Rank and Full Name]
-    FROM [City and State] AND LED BY DRUM MAJOR [Rank and Full Name] FROM [City and
-    State]. </span></p>
+      <p><b>c.
+      <i>[Units]: </i></b><i>The units take the
+      position of &ldquo;Attention.&rdquo; </i></p>
 
-    <p><span style='font-size:16.0pt'>[Insert
-    additional units as required.] </span></p>
+      <p><b>d.
+      <i>[COT]: </i></b><i>The COT directs <span class="bugle-remove">the
+      bugler to sound </span>&ldquo;Colors,&rdquo; &ldquo;Post,&rdquo; and &ldquo;March.&rdquo; </i></p>
+    </div>
 
-    <p><span style='font-size:14.0pt'>TODAY&rsquo;S
-    COLOR GUARD IS LED BY COMMAND SERGEANT MAJOR [Full Name] FROM [City and State].
-    </span></p>
+    <p class="narration"><b>COT:
+    </b><span class='sound-cpm'>SOUND COLORS, POST,
+    &lt;&lt;Pause&gt;&gt;, MARCH. </p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-t">t.
-    <i>[COT/Staff]: </i></span></b><i><span style='font-size:11.0pt'>The COT and
-    his or her staff execute &ldquo;Eyes Right&rdquo; and salute when they are in a position 6
-    steps from the reviewing stand. They terminate &ldquo;Eyes Right&rdquo; and the salute at 6
-    steps beyond the reviewing stand. </span></i><span style='font-size:11.0pt'></span></p>
+    <div class="note">
+      <div class="bugle-remove">
+        <p><b><span class="letter-e">e.</span>
+        <i class='bugle-cue'>[Bugler]: </i></b><i>The bugler sounds
+        &ldquo;Colors,&rdquo; &ldquo;Post,&rdquo; and &ldquo;March.&rdquo; </i></p>
+      </div>
 
-    <p><b><span style='font-size:11.0pt' class="letter-u">u.
-    <i>[Reviewing Officer/COT]: </i></span></b><i><span style='font-size:11.0pt'>The
-    reviewing officer returns only the salute of the COT. (The return of the salute
-    by the reviewing officer represents the salute of all subordinate commanders.
-    This enables the reviewing officer to observe the review without being
-    interrupted by frequent salutes.) </span></i><span style='font-size:11.0pt'></span></p>
+      <p><b><span class="letter-f">f.</span>
+      <i>[Unit CDRs/Colors]: </i></b><i>On the
+      <span class="prep-note">first stinger</span>, unit CDRs and colors execute &ldquo;About Face.&rdquo; </span></i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-v">v.
-    <i>[Reviewing Party]: </i></span></b><i><span style='font-size:11.0pt'>The
-    reviewing party and all uniformed spectators salute the National Colors as they
-    pass. All spectators rise as the National Colors pass the spectator area. </span></i><span
-    style='font-size:11.0pt'></span></p>
+      <p><b><span class="letter-g">g.</span>
+      <i>[Color Guard]: </i></b><i>On the <span class="prep-note">first stinger</span>, the color guard executes &ldquo;Reverse March.&rdquo; </i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-w">w.
-    <i>[COT/Staff]: </i></span></b><i><span style='font-size:11.0pt'>After saluting
-    the reviewing officer, the COT and his or her staff (without a command) execute
-    three wheeling movements and take their posts so that the COT is in line with
-    and to the right of the reviewing officer. (When executing wheeling movements,
-    the members of the staff should lengthen or shorten their steps as necessary in
-    order to remain aligned and abreast of each other while turning). </span></i><span
-    style='font-size:11.0pt'></span></p>
+      <p><b><span class="letter-h">h.</span>
+      <i>[Staff]: </i></b><i>On the <span class="prep-note">first stinger</span>, the staff executes &ldquo;Left Face.&rdquo; </i></p>
 
-    <p><b><span style='font-size:11.0pt' class="letter-x">x.
-    <i>[Band]: </i></span></b><i><span style='font-size:11.0pt'>When passing the
-    reviewing officer, the Bandmaster salutes and continues to look straight
-    forward. Simultaneously, the drum major executes &ldquo;Eyes Right&rdquo; and salutes. All other
-    members of the Band continue to play marching music without interruption. When
-    the Band has cleared the reviewing area, the drum major has the Band execute 3
-    left turns into a position in front of and facing the reviewing officer and at
-    least 12 steps from the left flank of the marching troops. As the National
-    Colors pass, the Bandmaster and the drum major salute while the Band continues
-    to play marching music. </span></i><span style='font-size:11.0pt'></span></p>
+      <p><b><span class="letter-i">i.</span></b><b> <i>[Unit CDRs and Colors]: </i></b><i>On the <span class='exec-note'>second stinger</span>, unit CDRs and colors star-burst
+      and march back to their units on the most direct
+      route, halt, and execute a facing movement to face the reviewing stand. </i></p>
 
-    <p><b><span style='font-size:11.0pt'>y.
-    <i>[Unit CDRs/Units]: </i></span></b><i><span style='font-size:11.0pt'>Unit
-    CDRs, staffs, and organizational colors will execute &ldquo;Eyes Right&rdquo; when directed
-    by the unit <span class=SpellE>CDRs.</span> Unit CDRs will give the preparatory
-    command &ldquo;Eyes&rdquo; over their right shoulder 2 steps from the &ldquo;Eyes-Right&rdquo; marker.
-    The command of execution, &ldquo;Right,&rdquo; is given when the right foot strikes the
-    ground, in line with the marker. The unit CDR and his or her unit execute &ldquo;Eyes
-    Right&rdquo; and salute. The organizational colors salute (dip) as well. The unit CSM
-    or NCO executes &ldquo;Eyes Right&rdquo; and salutes. The right file of each element
-    continues to look straight ahead; all other members execute &ldquo;Eyes Right.&rdquo; </span></i></p>
+      <p><b><span class="letter-j">j.</span>
+      <i>[CSM/Color Guard]: </i></b><i>On the
+      <span class='exec-note'>second stinger</span>, the CSM marches the color guard back to the formation of
+      troops, executes &ldquo;Colors, Reverse, March,&rdquo; and halts in the original position. </i></p>
 
-    <p><b><span style='font-size:11.0pt'>z.
-    <i>[Unit CDRs]: </i></span></b><i><span style='font-size:11.0pt'>When the rear
-    of a unit passes 6 steps beyond the reviewing stand, the unit CDR gives the
-    unit and organizational colors the command &ldquo;Ready-Front&rdquo; (as the left foot
-    strikes the ground). The CDR drops his or her salute and turns head and eyes to
-    the front. </span></i><span style='font-size:11.0pt'></span></p>
+      <p><b><span class="letter-k">k.</span>
+      <i>[COT]: </i></b><i>Once the colors have
+      cleared, the COT returns the staff to its original position centered on the
+      formation and then directs the staff to &ldquo;Right Face.&rdquo; </i></p>
+    </div>
 
-    <p><span class=GramE><b><span
-    style='font-size:11.0pt'>aa</span></b></span><b><span style='font-size:11.0pt'>.
-    <i>[Color Guard]: </i></span></b><i><span style='font-size:11.0pt'>As the color
-    guard passes the reviewing officer, each member, except the right-flank
-    Soldier, executes &ldquo;Eyes-Right&rdquo; on the CSM&rsquo;s command. </span></i><span
-    style='font-size:11.0pt'></span></p>
+    <p class="narration">
+      <b>COT: </b>RIGHT FACE.
+    </p>
 
-    <p><b><i><span style='font-size:11.0pt'>&lt;&lt;NOTE:
-    </span></i></b><i><span style='font-size:11.0pt'>The unit colors are dipped,
-    the National Colors and U.S. Army colors are not<span class=GramE>.<b>&gt;</b></span><b>&gt;
-    </b></span></i><span style='font-size:11.0pt'></span></p>
+    <div class="note">
+      <p><b><i>[COT]:
+      </i></b><i>The COT executes &ldquo;Left Face&rdquo;
+      and waits until all units and colors are in position, at which time he or she
+      faces about. </i></p>
 
-    <p><b><span style='font-size:11.0pt'>ab.
-    <i>[Band]: </i></span></b><i><span style='font-size:11.0pt'>After the last unit
-    has passed the reviewing stand, the Band will stop playing marching music. </span></i><span
-    style='font-size:11.0pt'></span></p>
+      <p><b><i>>&lt;&lt;CUE:
+      </i></b><i>The COT faces the hosting
+      commander on the reviewing stand.<b>&gt;&gt; </b></i></p>
 
-    <p><b><span style='font-size:11.5pt'>12.
-    Army Song. </span></b></p>
+      <p><b><span class="letter-l">l.</span>
+      <i>[New CDR]: </i></b><i>The new CDR
+      commands to &ldquo;Pass in Review.&rdquo; <</i></p>
+    </div>
 
-    <p><b><span style='font-size:11.0pt'>a.
-    <i>[Narrator/Translator]: </i></span></b><span style='font-size:11.0pt'></span></p>
+    <p class="narration"><b>NEW
+    CDR: </b>PASS IN REVIEW. </p>
 
-    <p><b><span style='font-size:14.0pt'>NARRATOR:
-    </span></b><span style='font-size:14.0pt'>LADIES AND GENTLEMEN, PLEASE STAND
-    FOR THE PLAYING AND SINGING OF THE ARMY SONG. </span></p>
+    <p class="narration"><b><span class="letter-m">m.</span>
+    <i>[COT]: </i></b><i>The COT directs the
+    units to &ldquo;Pass in Review.&rdquo; </i></p>
 
-    <p><b><span style='font-size:14.0pt'>TRANSLATOR:
-    </span></b><span style='font-size:14.0pt'>[HOST-NATION LANGUAGE TRANSLATION]. </span></p>
+    <p class="narration"><b>COT:
+    </b>PASS IN REVIEW. </p>
 
-    <p><b><span style='font-size:11.0pt'>b.
-    <i>[Band]: </i></span></b><i><span style='font-size:11.0pt'>After the last
-    troop element has passed the reviewing stand and has executed &ldquo;Ready-Front,&rdquo;
-    the Band begins to play an eight-bar drum cadence. At the appropriate time, the
-    Band begins playing (in place) the official version of &ldquo;The Army Song.&rdquo; The
-    drum major marches the Band forward and executes a left turn onto the reviewing
-    line while the Band continues to play until the completion of the chorus. </span></i><span
-    style='font-size:11.0pt'></span></p>
+    <div class="note">
+      <p><b><span style='font-size:11.0pt' class="letter-n">n.</span>
+      <i>[Unit CDRs/COT]: </i></span></b><i><span style='font-size:11.0pt'>Unit CDRs
+      face to the right, the COT then faces to the left. </span></i><span
+      style='font-size:11.0pt'></span></p>
 
-    <p><b><span style='font-size:11.5pt'>13.
-    Conclusion. </span></b></p>
+      <p><b><span class="letter-o">o.</span>
+      <i>[Band]: </i></b><i>The Band director
+      raises his baton, and as the right-flank commander commands &ldquo;Right Turn,
+      March,&rdquo; the Band begins to play and to march forward onto the line of march. </i></p>
 
-    <p><b><span style='font-size:11.0pt'>a.
-    <i>[COT/New CDR]: </i></span></b><i><span style='font-size:11.0pt'>After the
-    Army Song, the COT and the new CDR face each other and salute. The COT
-    announces the conclusion of the ceremony. </span></i><span style='font-size:
-    11.0pt'></span></p>
+      <p><b><span class="letter-p">p.</span>
+      <i>[Formations]: </i></b><i>Formations
+      move out in succession and follow the Band in columns. Organizational colors do
+      a wheel to fall behind unit CDRs as they march forward. Formations execute a
+      right turn on a parallel path with unit CDRs.
+      Formations will be in line with and parallel to unit CDRs until the first left
+      turn. After the first left turn, units will be centered on and behind unit
+      commanders and their colors. </i></span></p>
 
-    <p><b><span style='font-size:14.0pt'>COT:
-    </span></b><span style='font-size:14.0pt'>SIR, THIS CONCLUDES THE CEREMONY. </span></p>
+      <p><b><i>&lt;&lt;NOTE:
+      </i></b><i>There will be 6 steps between
+      unit CDRs and organizational colors, and 12 steps between organizational colors
+      and platoon formations.<b>&gt;</b><b>&gt; </b></i></p>
 
-    <p><b><span style='font-size:11.0pt'>b.
-    <i>[COT/New CDR]: </i></span></b><i><span style='font-size:11.0pt'>The COT and
-    the new CDR exchange salutes again. </span></i><span style='font-size:11.0pt'></span></p>
+      <p><b><span class="letter-q">q.</span>
+      <i>[Units]: </i></b><i>Units will execute
+      two left turns before moving onto the reviewing line. </i></p>
 
-    <p><b><span style='font-size:11.0pt'>c.
-    <i>[Narrator/Translator]: </i></span></b><span style='font-size:11.0pt'></span></p>
+      <p><b><span class="letter-r">r.</span>
+      <i>[Band/Units]: </i></b><i>The Band and
+      each following unit change direction at points indicated by markers. When a
+      unit reaches the turn marker, the unit CDR commands &ldquo;Left Turn, March.&rdquo; As soon
+      as the unit has completed the turn, the unit CDR commands &ldquo;Forward March.&rdquo; </i></p>
 
-    <p><b><span style='font-size:14.0pt'>NARRATOR:
-    </span></b><span style='font-size:14.0pt'>LADIES AND GENTLEMEN, THIS CONCLUDES
-    TODAY&rsquo;S CEREMONY. PLEASE JOIN
+      <p><b><span class="letter-s">s.</span>
+      <i>[COT/Staff]: </i></b><i>On the command
+      &ldquo;Right Turn&rdquo;, (pause), &ldquo;March&rdquo; by the CDR of the unit next to the Band, the COT
+      and his or her staff move to a marching position 12 steps in front of the drum
+      major (on the reviewing line). </i></p>
 
-    <span class="incoming-rank-and-name">
-      [New CDR&rsquo;s Rank and Full Name]
-    </span>
+      <p><b><i>&lt;&lt;CUE: </i></b><i>>Before the units pass the reviewing stand.<b>&gt;&gt;
+      </b></i></p>
+    </div>
 
-    AT THE [Reception
-    Location].
+    <div class="narration">
+      <p><b>NARRATOR:
+      </b>PLEASE STAND AND RENDER THE
+      APPROPRIATE HONORS TO THE NATIONAL COLORS AS THEY PASS. </p>
 
-    <span class="outgoing-rank-and-name">
-      [Previous CDR&rsquo;s Rank and Full Name]
-    </span> AND
+      <p>THE
+      COMMANDER OF TROOPS FOR TODAY&rsquo;S CEREMONY IS [Duty Position, Unit, Rank, and
+      Full Name] FROM [City and State]. </p>
 
-    <span class="outgoing-spouse-rank-and-name">
-    [Title (Mr<span class=GramE>./</span>Mrs./Ms.) and Name of Previous CDR&rsquo;s Spouse]
-    </span>
+      <p>THE
+      UNITED STATES ARMY EUROPE BAND IS UNDER THE COMMAND OF [Rank and Full Name]
+      FROM [City and State] AND LED BY DRUM MAJOR [Rank and Full Name] FROM [City and
+      State]. </p>
 
-     WILL REMAIN ON THE FIELD FOR YOUR FINAL WELL
-    WISHES. THANK YOU FOR JOINING US TODAY. </span></p>
+      <p>[Insert
+      additional units as required.] </p>
 
-    <p class=MsoNormal ><b><span style='font-size:14.0pt;
-    line-height:107%'>TRANSLATOR</span></b><span style='font-size:14.0pt;
-    line-height:107%'>: [HOST-NATION LANGUAGE TRANSLATION].</span></p>
+      <p>TODAY&rsquo;S
+      COLOR GUARD IS LED BY COMMAND SERGEANT MAJOR [Full Name] FROM [City and State].
+      </p>
+    </div>
+
+    <div class="note">
+      <p><b><span class="letter-t">t.</span>
+      <i>[COT/Staff]: </i></b><i>The COT and
+      his or her staff execute &ldquo;Eyes Right&rdquo; and salute when they are in a position 6
+      steps from the reviewing stand. They terminate &ldquo;Eyes Right&rdquo; and the salute at 6
+      steps beyond the reviewing stand. ></i></p>
+
+      <p><b><span class="letter-u">u.</span>
+      <i>[Reviewing Officer/COT]: </i></b><i>The
+      reviewing officer returns only the salute of the COT. (The return of the salute
+      by the reviewing officer represents the salute of all subordinate commanders.
+      This enables the reviewing officer to observe the review without being
+      interrupted by frequent salutes.) </i></p>
+
+      <p><b><span class="letter-v">v.</span>
+      <i>[Reviewing Party]: </i></b><i>The
+      reviewing party and all uniformed spectators salute the National Colors as they
+      pass. All spectators rise as the National Colors pass the spectator area. </i></p>
+
+      <p><b><span class="letter-w">w.</span>
+      <i>[COT/Staff]: </i></b><i>After saluting
+      the reviewing officer, the COT and his or her staff (without a command) execute
+      three wheeling movements and take their posts so that the COT is in line with
+      and to the right of the reviewing officer. (When executing wheeling movements,
+      the members of the staff should lengthen or shorten their steps as necessary in
+      order to remain aligned and abreast of each other while turning). </i></p>
+
+      <p><b><span class="letter-x">x.</span>
+      <i>[Band]: </i></b><i>When passing the
+      reviewing officer, the Bandmaster salutes and continues to look straight
+      forward. Simultaneously, the drum major executes &ldquo;Eyes Right&rdquo; and salutes. All other
+      members of the Band continue to play marching music without interruption. When
+      the Band has cleared the reviewing area, the drum major has the Band execute 3
+      left turns into a position in front of and facing the reviewing officer and at
+      least 12 steps from the left flank of the marching troops. As the National
+      Colors pass, the Bandmaster and the drum major salute while the Band continues
+      to play marching music. </i></p>
+
+      <p><b><span class="letter-y">y.</span>
+      <i>[Unit CDRs/Units]: </i></b><i>Unit
+      CDRs, staffs, and organizational colors will execute &ldquo;Eyes Right&rdquo; when directed
+      by the unit CDRs. Unit CDRs will give the preparatory
+      command &ldquo;Eyes&rdquo; over their right shoulder 2 steps from the &ldquo;Eyes-Right&rdquo; marker.
+      The command of execution, &ldquo;Right,&rdquo; is given when the right foot strikes the
+      ground, in line with the marker. The unit CDR and his or her unit execute &ldquo;Eyes
+      Right&rdquo; and salute. The organizational colors salute (dip) as well. The unit CSM
+      or NCO executes &ldquo;Eyes Right&rdquo; and salutes. The right file of each element
+      continues to look straight ahead; all other members execute &ldquo;Eyes Right.&rdquo; </i></p>
+
+      <p><b><span class="letter-z">z.</span>
+      <i>[Unit CDRs]: </i></b><i>When the rear
+      of a unit passes 6 steps beyond the reviewing stand, the unit CDR gives the
+      unit and organizational colors the command &ldquo;Ready-Front&rdquo; (as the left foot
+      strikes the ground). The CDR drops his or her salute and turns head and eyes to
+      the front. </i></p>
+
+      <p><b><span class="letter-aa">aa.</span>
+      <i>[Color Guard]: </i></b><i>As the color
+      guard passes the reviewing officer, each member, except the right-flank
+      Soldier, executes &ldquo;Eyes-Right&rdquo; on the CSM&rsquo;s command. </i></p>
+
+      <p><b><i>&lt;&lt;NOTE:
+      </i></b><i>The unit colors are dipped,
+      the National Colors and U.S. Army colors are not.<b>&gt;&gt;
+      </b></i></p>
+
+      <p><b><span class="letter-ab">ab.</span>
+      <i>[Band]: </i></b><i>After the last unit
+      has passed the reviewing stand, the Band will stop playing marching music. </i></p>
+    </div>
+
+    <p class="phase"><b>12.
+    Army Song. </b></p>
+
+    <p class="note"><b>a.
+    <i>[Narrator/Translator]: </i></b></p>
+
+    <div class="narration">
+      <p><b>NARRATOR:
+      </b>LADIES AND GENTLEMEN, PLEASE STAND
+      FOR THE PLAYING AND SINGING OF THE ARMY SONG. </p>
+
+      <p><b>TRANSLATOR:
+      </b>[HOST-NATION LANGUAGE TRANSLATION]. </p>
+    </div>
+
+    <div class="note">
+      <p><b>b.
+      <i>[Band]: </i></b><i>After the last
+      troop element has passed the reviewing stand and has executed &ldquo;Ready-Front,&rdquo;
+      the Band begins to play an eight-bar drum cadence. At the appropriate time, the
+      Band begins playing (in place) the official version of &ldquo;The Army Song.&rdquo; The
+      drum major marches the Band forward and executes a left turn onto the reviewing
+      line while the Band continues to play until the completion of the chorus. </i></p>
+
+      <p class="phase"><b>13.
+      Conclusion. </b></p>
+
+      <p><b>a.
+      <i>[COT/New CDR]: </i></b><i>After the
+      Army Song, the COT and the new CDR face each other and salute. The COT
+      announces the conclusion of the ceremony. </i></p>
+    </div>
+
+    <p class="narration"><b>COT:
+    </b>SIR, THIS CONCLUDES THE CEREMONY. </p>
+
+    <div class="note">
+      <p><b>b.
+      <i>[COT/New CDR]: </i></b><i>The COT and
+      the new CDR exchange salutes again. </i></p>
+
+      <p><b><span style='font-size:11.0pt'>c.
+      <i>[Narrator/Translator]: </i></span></b><span style='font-size:11.0pt'></span></p>
+    </div>
+
+    <div class="narration">
+      <p><b>NARRATOR:
+      </b>LADIES AND GENTLEMEN, THIS CONCLUDES
+      TODAY&rsquo;S CEREMONY. PLEASE JOIN
+
+      <span class="incoming-rank-and-name">
+        [New CDR&rsquo;s Rank and Full Name]
+      </span>
+
+      AT THE [Reception
+      Location].
+
+      <span class="outgoing-rank-and-name">
+        [Previous CDR&rsquo;s Rank and Full Name]
+      </span> AND
+
+      <span class="outgoing-spouse-rank-and-name">
+      [Title (Mr./Mrs./Ms.) and Name of Previous CDR&rsquo;s Spouse]
+      </span>
+
+       WILL REMAIN ON THE FIELD FOR YOUR FINAL WELL
+      WISHES. THANK YOU FOR JOINING US TODAY. </span></p>
+
+      <p class=MsoNormal ><b>TRANSLATOR</b>: [HOST-NATION LANGUAGE TRANSLATION].</p>
+    </div>
 
   </div>
 </body>

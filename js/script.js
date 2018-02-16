@@ -18,7 +18,8 @@ flowerBox.onclick = function() {
 button.onclick = function(){
   // Get unit/date/time input values;
   var unitName = $('#unit-name-input').val();
-  var date = $('#ceremony-date-input').val();
+  var date = new Date($('#ceremony-date-input').val());
+  console.log(date);
   var time = $('#ceremony-time-input').val();
 
   // Outgoing/Incoming Commander Values
@@ -186,7 +187,28 @@ function changeUnitName(unitName) {
 
 function changeDate(date) {
   if (date) {
-    $('.ceremony-date').html(date);
+
+    var months = [
+      "Jan", "Feb", "Mar",
+      "Apr", "May", "Jun", "Jul",
+      "Aug", "Sep", "Oct",
+      "Nov", "Dec"
+    ]
+
+    var days = [
+      "Sunday", "Monday", "Tuesday", "Wednesday",
+      "Thursday","Friday","Saturday"
+    ];
+
+    var weekDay = days[date.getDay()];
+    console.log(weekDay);
+    var day = date.getDate();
+    var month = months[date.getMonth()];
+    var year = date.getFullYear();
+
+    var prettyDate = weekDay + ' ' + month + ' ' + day + ', ' + year;
+
+    $('.ceremony-date').html(prettyDate);
   }
 }
 
