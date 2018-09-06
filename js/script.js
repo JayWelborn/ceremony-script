@@ -26,6 +26,13 @@ $("#outgoing-rank-input").change(function(event) {
   var deferrable = ['GEN', 'LTG', 'MG', 'BG'];
   if (deferrable.indexOf(event.currentTarget.value) === -1) {
     $('#honors-deferment-checkbox').prop('disabled', true);
+    // Alert user if they attempted to defer honors to a
+    // COL or lower, and de-check the checkbox
+    if($('#honors-deferment-checkbox').prop('checked')) {
+      $('#honors-deferment-checkbox').prop('checked', false);
+      alert("Honors are only rendered for officers in grade O7 and above. " +
+            "For more information, see AR 600-25 Chapter 2 Table 2-1.");
+    }
   } else {
     $('#honors-deferment-checkbox').prop('disabled', false);
   }
