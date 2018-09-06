@@ -1,5 +1,6 @@
 #script-generator {
   label, {
+    font-size: 1rem;
     display: inline-block;
     width: 25%;
     text-align: right;
@@ -8,13 +9,28 @@
   }
 
   input, select {
+    font-size: .95rem;
+    font-family: "Times New Roman", serif;
     padding: 5px;
     margin-bottom: 10px;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 1px solid $gray;
   }
 
   input[type=text], select {
     width: 20%;
+  }
+
+  select {
+    background-color: rgba(55,55,30,.1);
+  }
+
+  button {
+    font-family: "Times New Roman", serif;
+    margin-left: calc(25% + 15px);
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 1rem;
   }
 }
