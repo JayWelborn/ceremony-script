@@ -558,7 +558,7 @@ function removeHonors() {
     $(this).html(--number);
   });
   // set global state to track when honors have been removed.
-  honorsRemoved = true;
+  this.honorsRemoved = true;
 }
 
 
@@ -569,7 +569,7 @@ function removeHonors() {
 function addHonors(ruffles) {
   $('.honors').show();
   // Only add one to these title numbers if honors have been removed.
-  if (honorsRemoved) {
+  if (this.honorsRemoved) {
     $('.honors-number').each(function(i, obj) {
       var number = parseInt($(this).html());
       $(this).html(++number);
@@ -584,5 +584,5 @@ function addHonors(ruffles) {
     $(this).html(9 + 2 * ruffles);
   });
 
-  honorsRemoved = false;
+  this.honorsRemoved = false;
 }
