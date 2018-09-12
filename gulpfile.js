@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 
 // JS processors
+// var babel = require('gulp-babel');
 var browserify = require('gulp-browserify');
 var uglify     = require('gulp-uglify');
 
@@ -15,6 +16,9 @@ var sourcemaps   = require('gulp-sourcemaps');
 // process JS files and return the stream.
 gulp.task('js', function () {
     return gulp.src('js/*js')
+        // .pipe(babel({
+        //     presets: ['es2015']
+        // }))
         .pipe(browserify())
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
@@ -66,7 +70,6 @@ gulp.task('browsersync', function() {
             baseDir: "./"
         },
         notify: true,
-        browser: ['google chrome', 'firefox']
     });
 })
 
