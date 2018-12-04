@@ -136,9 +136,11 @@ button.onclick = function(){
   // add or remove deferment of honors
   // checked indicates honors are being deferred
   if (honorsDeferredBox.checked) {
-    unDeferHonors();
-  } else {
+    var ruffles = entitledToHonors.indexOf($('#outgoing-rank-input').val()) + 1;
     deferHonors();
+    addHonors(ruffles);
+  } else {
+    unDeferHonors();
   }
 
   // Change unit name
@@ -534,7 +536,7 @@ function removeFlowers() {
 /**
  * Hide the honors deferment section of the script
  */
-function deferHonors() {
+function unDeferHonors() {
   $('.honors-deferment').hide();
 }
 
@@ -542,7 +544,7 @@ function deferHonors() {
 /**
  * Show the honors deferment section of the script
  */
-function unDeferHonors() {
+function deferHonors() {
   $('.honors-deferment').show();
 }
 

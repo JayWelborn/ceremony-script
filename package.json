@@ -4,7 +4,8 @@
   "description": "This is a single-page applet that will automatically generate a script for a ceremony based on information submitted via a web form",
   "main": "Script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
   "author": "Jay Welborn",
   "license": "ISC",
